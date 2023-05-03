@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 27, 2023, 6:03:44 AM by Hibernate Tools 4.3.6.Final -->
+<hibernate-mapping default-lazy="false">
+ <class catalog="qlsv" name="com.stu.Model.Sinhvien" table="sinhvien">
+  <id name="mssv" type="java.lang.Integer">
+   <column name="mssv"/>
+   <generator class="identity"/>
+  </id>
+  <many-to-one class="com.stu.Model.Lop" fetch="select" name="lop">
+   <column name="malop" not-null="true"/>
+  </many-to-one>
+  <property generated="never" lazy="false" name="hoten" type="string">
+   <column length="50" name="hoten"/>
+  </property>
+  <property generated="never" lazy="false" name="dtb" type="java.lang.Double">
+   <column name="dtb" precision="22" scale="0"/>
+  </property>
+ </class>
+</hibernate-mapping>
